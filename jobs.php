@@ -1,10 +1,6 @@
 <?php
-require_once 'apps/models/Job.php';
-require_once 'apps/models/Project.php';
-require_once 'apps/models/Printable.php';
-require 'lib1/Project.php';
+require_once 'vendor/autoload.php'; 
 use Apps\Models\{Job,Project,Printable};
-
 
 // class Job{
 //     private $title;
@@ -67,7 +63,6 @@ $project1 = new Project ('Project 1','Project 1 Lorem ipsum dolor sit amet conse
 Hic nam perspiciatis ut adipisci totam, eius consectetur quod.');
 
 
-$projectLib = new Lib1\Project();
 
  $jobs = [
     $job1,
