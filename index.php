@@ -1,4 +1,25 @@
 <?php
+
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+require_once 'vendor/autoload.php'; 
+use Illuminate\Database\Capsule\Manager as Capsule;
+use Apps\Models\Job;
+$capsule = new Capsule;
+
+$capsule->addConnection([
+    'driver'    => 'mysql',
+    'host'      => 'localhost',
+    'database'  => 'cursophp',
+    'username'  => 'root',
+    'password'  => 'root',
+    'charset'   => 'utf8',
+    'collation' => 'utf8_unicode_ci',
+    'prefix'    => '',
+]);
+
+
+
 include_once ('jobs.php');
  $nombre = 'Robert Mendoza';
  $limitMonsths = 1048;

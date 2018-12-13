@@ -4,5 +4,7 @@
             "Apps\\": "apps/"
         }
     },
-    "require": {}
+    "require": {
+        "illuminate/database": "^5.7"
+    }
 }

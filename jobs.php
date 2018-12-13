@@ -42,21 +42,27 @@ use Apps\Models\{Job,Project,Printable};
 // }
 
 $job1 = new Job('PHP Developer','Php Lorem ipsum dolor sit amet consectetur.');
+
 //$job1->setTitle ('PHP Developer');
 //$job1->description ='Php Lorem ipsum dolor sit amet consectetur.';
 //$job1->visible = true;
+
 $job1->months=44;
 
 $job2 = new Job('Python Dev','Python Lorem ipsum dolor sit amet consectetur.');
+
 //$job2->setTitle ('Python Dev');
 //$job2->description ='Python Lorem ipsum dolor sit amet consectetur.';
 //$job2->visible = true;
+
 $job2->months=3;
 
 $job3 = new Job('Devops','Devops Lorem ipsum dolor sit amet consectetur.');
+
 //$job3->setTitle ('');
 //$job3->description ='Devops Lorem ipsum dolor sit amet consectetur.';
 //$job3->visible = true;
+
 $job3->months=26;
 
 $project1 = new Project ('Project 1','Project 1 Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam commodi distinctio quod natus, deserunt dolores nisi magni accusantium similique eaque vel assumenda repellat voluptate, tempora accusamus voluptates voluptatum ut iusto.
