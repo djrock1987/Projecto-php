@@ -4,7 +4,8 @@ error_reporting(E_ALL);
 ini_set('display_errors', '1');
 require_once 'vendor/autoload.php'; 
 use Illuminate\Database\Capsule\Manager as Capsule;
-use Apps\Models\Job;
+//use Apps\Models\Job;
+use App\Models\{Job, Project};
 $capsule = new Capsule;
 
 $capsule->addConnection([
@@ -97,7 +98,7 @@ include_once ('jobs.php');
             <?php
 
               for ($experience = 0; $experience < count($projects); $experience ++ ) {
-                  printElement($projects[$experience]);
+                  printElement1($projects[$experience]);
                 }
             ?>
           </ul>

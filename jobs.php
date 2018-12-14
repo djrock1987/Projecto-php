@@ -98,14 +98,14 @@ $jobs =Job::all();
     //  ]
    //];
 
-
-  $project1 = new Project ('Project 1','Project 1 Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam commodi distinctio quod natus, deserunt dolores nisi magni accusantium similique eaque vel assumenda repellat voluptate, tempora accusamus voluptates voluptatum ut iusto.
-  Hic nam perspiciatis ut adipisci totam, eius consectetur quod.');
+   $projects =Project::all();
+//   $project1 = new Project ('Project 1','Project 1 Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam commodi distinctio quod natus, deserunt dolores nisi magni accusantium similique eaque vel assumenda repellat voluptate, tempora accusamus voluptates voluptatum ut iusto.
+//   Hic nam perspiciatis ut adipisci totam, eius consectetur quod.');
     
 
- $projects = [
-    $project1
- ];
+//  $projects = [
+//     $project1
+//  ];
  //function printElement(Printable $job){ 
  function printElement($job){
   //  if ($job->visible == false) {
@@ -124,4 +124,39 @@ $jobs =Job::all();
      echo '<li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>';
      echo '</ul>';
      echo '</li>';
+ }
+
+ function printElement1($project){
+  
+    //  echo '<li class="work-position">';
+    //  echo '<h5>'.$project->title. '</h5>';
+    //  echo '<p>' .$project->description. '</p>';
+    //  echo '<img src="' .$project->img. '" alt="">';
+    //  //echo '<p> Experiencia acumulada ' .$totalMonsths. '</p>';
+    //  echo '<strong>Achievements:</strong>';
+    //  echo '<ul>';
+    //  echo '<li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>';
+    //  echo '<li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>';
+    //  echo '<li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>';
+    //  echo '</ul>';
+    //  echo '</li>';
+
+     echo '<div class="project">';
+     echo '<h5>'.$project->title. '</h5>';
+     echo  '<div class="row">';
+     echo '<div class="col-3">';
+     echo '<img id="profile-picture" src="'.$project->img.'" alt="">';
+     echo      '</div>';
+     echo     ' <div class="col">';
+     echo     '<p>' .$project->description. '</p>';
+     echo       ' <strong>Technologies used:</strong>';
+     echo       ' <span class="badge badge-secondary">PHP</span>';
+     echo       '<span class="badge badge-secondary">HTML</span>';
+     echo       ' <span class="badge badge-secondary">CSS</span>';
+     echo      '</div>';
+     echo '</div>';
+ echo '</div>';
+
+
+
  }
