@@ -3,7 +3,7 @@ ini_set(‘display_errors’,1);
 ini_set(‘display_starup_error’,1);
 error_reporting(E_ALL);
 
-require_once 'vendor/autoload.php';
+require_once '../vendor/autoload.php';
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 
@@ -23,3 +23,19 @@ $capsule->addConnection([
 $capsule->setAsGlobal();
 // Setup the Eloquent ORM... (optional; unless you've used setEventDispatcher())
 $capsule->bootEloquent();
+
+$request = Zend\Diactoros\ServerRequestFactory::fromGlobals(
+    $_SERVER,
+    $_GET,
+    $_POST,
+    $_COOKIE,
+    $_FILES
+);
+var_dump($request->getUri()->getPath());
+
+// $route =$_GET['route'] ?? '/';
+// if ($route == '/') {
+//     require '../index.php';
+// }elseif($route == 'addJob'){
+//     require '../addJob.php';
+// }
